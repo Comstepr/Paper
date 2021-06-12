@@ -34,6 +34,6 @@ jobs:
               run: |
                   git config --global user.email "no-reply@github.com"
                   git config --global user.name "Github Actions"
-                  ./paper build
-            - name: Build javadocs
-              run: mvn -pl Paper-API,Paper-MojangAPI -am javadoc:javadoc
+                  chmod +X gradlew
+                  chmod 777 gradlew
+                  ./gradlew build
